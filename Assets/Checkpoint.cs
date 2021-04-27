@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelBounds : MonoBehaviour
+public class Checkpoint : MonoBehaviour
 {
     public Rigidbody player;
     public SpawnController spawnController;
 
-    void OnTriggerExit(Collider other) {
+    void OnTriggerEnter(Collider other)
+    {
         if (other.tag == "Player")
         {
-            player.position = spawnController.GetSpawn().transform.position;
+            spawnController.SetSpawn(this);
         }
     }
 }
