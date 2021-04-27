@@ -1,41 +1,105 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float sprintMult = 1.5f;
+    public float accel = 1.0f;
+    public float runMult = 1.25f;
     public float jumpHeight = 1.0f;
+    public float maxWalkSpeed = 1.0f;
 
-    private float movementX;
-    private float movementY;
+    private Vector3 movement;
     private Rigidbody rigid;
-    private float jump = 0.0f;
+    private bool jump = false;
+    private bool isGrounded = false;
+    private bool run = false;
+    private float maxRun;
+    private float maxSpeed;
 
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
+        maxRun = maxWalkSpeed * runMult;  // Calculate the max run speed
     }
 
-    void OnMove(InputValue movementValue)
+    void Update()
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-
-        movementX = movementVector.x;
-        movementY = -movementVector.y;
+        updateMovement();  // Get player input
+        if (movement != Vector3.zero)
+        {
+            // Look in the direction of movement
+            rigid.rotation = Quaternion.LookRotation(-movement);
+        }
     }
-
-    void OnJump()
-    {
-        jump = 1.0f * jumpHeight;
-    }
-
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementY, jump, movementX);
-        rigid.AddForce(movement * speed);
-        jump = 0.0f;
+        if (jump)
+        {
+            if (isGrounded)  // Jump if button pressed and grounded
+            {
+                rigid.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+            }
+            jump = false;
+        }
+
+        if (run)
+        {
+            maxSpeed = maxRun;  // Changes max speed if running
+        }
+        else
+        {
+            maxSpeed = maxWalkSpeed;  // Changes back to default
+        }
+
+        rigid.AddForce(movement * accel);  // Move character
+
+
+        // This is the behavior that controls top speed
+        if (rigid.velocity.magnitude > maxSpeed)
+        {
+            float currentJump = rigid.velocity.y;  // We don't want to clamp vertical
+            Vector3 newSpeed = rigid.velocity.normalized * maxSpeed;
+            newSpeed.y = currentJump;
+            rigid.velocity = newSpeed;
+        }
+    }
+
+    void updateMovement()
+    {
+        float movementHori = 0;
+        float movementVert = 0;
+
+
+        movementHori = Input.GetAxis("Horizontal");
+
+        movementVert = Input.GetAxis("Vertical");
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+        }
+
+        if (Input.GetButton("Run"))
+        {
+            run = true;
+        }
+        else
+        {
+            run = false;
+        }
+
+        movement = new Vector3(-movementVert, 0.0f, movementHori);
+    }
+
+    // Checks if player is grounded for jumping
+    void OnCollisionStay(Collision other)
+    {
+        isGrounded = true;
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        isGrounded = false;
     }
 }
