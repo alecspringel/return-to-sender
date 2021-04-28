@@ -1922,6 +1922,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4872388060876672632, guid: ea870cb27e688ad4e94e2f14c7011653, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872388060876672632, guid: ea870cb27e688ad4e94e2f14c7011653, type: 3}
       propertyPath: ForwardY
       value: 1
       objectReference: {fileID: 0}

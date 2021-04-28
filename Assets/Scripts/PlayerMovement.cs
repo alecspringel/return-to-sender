@@ -102,4 +102,10 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = false;
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        // Stops player from jumping forever
+        rigid.velocity = new Vector3(rigid.velocity.x, 0.0f, rigid.velocity.z);
+    }
 }
