@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 1.0f;
     public float maxWalkSpeed = 1.0f;
 
+    private Animator animator;
     private Vector3 movement;
     private Rigidbody rigid;
     private bool jump = false;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         maxRun = maxWalkSpeed * runMult;  // Calculate the max run speed
     }
@@ -87,6 +89,15 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             run = false;
+        };
+
+        if (movementHori != 0 || movementVert != 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
 
         movement = new Vector3(-movementVert, 0.0f, movementHori);
