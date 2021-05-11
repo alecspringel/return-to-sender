@@ -522,9 +522,9 @@ GameObject:
   - component: {fileID: 3661395837393406231}
   - component: {fileID: 3661395837393406230}
   - component: {fileID: 3661395837393406228}
-  - component: {fileID: 3661395837393406229}
+  - component: {fileID: 3249788061354356968}
   m_Layer: 0
-  m_Name: Alien 1
+  m_Name: Alien Improved
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,7 +595,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3661395837393406229
+--- !u!114 &3249788061354356968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -604,13 +604,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4471667389919966297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd74796fa1db86a6eb2850a949eaa2df, type: 3}
+  m_Script: {fileID: 11500000, guid: 95a9e61f8755a37879c42c6c1aed2d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accel: 20
-  runMult: 3
   jumpHeight: 200
-  maxWalkSpeed: 5
+  maxSpeed: 10
 --- !u!1 &4492962030872289339
 GameObject:
   m_ObjectHideFlags: 0

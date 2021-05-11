@@ -2416,6 +2416,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea870cb27e688ad4e94e2f14c7011653, type: 3}
+--- !u!1 &1551251530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 615355574206979585, guid: ea870cb27e688ad4e94e2f14c7011653, type: 3}
+  m_PrefabInstance: {fileID: 1441870375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1551251531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551251530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80f12894ae2c024a85a77112518a7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockback: 1000
 --- !u!1 &1564672052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,6 +3014,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
+      propertyPath: jumpHeight
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 3838576924357095139, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
       propertyPath: m_RootOrder
       value: 0

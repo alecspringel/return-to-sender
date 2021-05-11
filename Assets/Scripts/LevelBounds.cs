@@ -11,6 +11,7 @@ public class LevelBounds : MonoBehaviour
         if (other.tag == "Player")
         {
             player.position = spawnController.GetSpawn().transform.position;
+            player.velocity = Vector3.zero;
         }
     }
 }
