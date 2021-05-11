@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameEnding : MonoBehaviour
 {
     public GameObject player;
+    public Object nextScene;
+
     Rigidbody m_Rigidbody;
     bool m_IsPlayerAtExit;
 
@@ -37,7 +39,7 @@ public class GameEnding : MonoBehaviour
         else
         {
             //Currently restarting when you cross the finish line
-            SceneManager.LoadScene (0);
+            SceneManager.LoadScene (nextScene.name);
             //Application.Quit();
         }
     }
