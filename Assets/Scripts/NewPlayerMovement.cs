@@ -45,8 +45,8 @@ public class NewPlayerMovement : MonoBehaviour
             }
             jump = false;
         }
-
-        speedToAdd = maxSpeed - rigid.velocity.magnitude;
+        Vector3 horizontalSpeed = new Vector3(rigid.velocity.x, 0.0f, rigid.velocity.z);
+        speedToAdd = maxSpeed - horizontalSpeed.magnitude;
         rigid.AddForce(movement * speedToAdd);  // Move character
     }
 
