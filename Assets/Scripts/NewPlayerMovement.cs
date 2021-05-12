@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewPlayerMovement : MonoBehaviour
 {
@@ -16,12 +17,17 @@ public class NewPlayerMovement : MonoBehaviour
     private float speedToAdd = 0.0f;
     private float groundDistance;
 
+    public Text timeText;
+    private float startTime;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         groundDistance = coll.bounds.extents.y;
+
+        startTime = Time.time;
     }
 
     void Update()
@@ -34,6 +40,12 @@ public class NewPlayerMovement : MonoBehaviour
         }
 
         isGrounded = checkGrounded();
+
+        float t = (3*60) - Time.time;
+        string minutes = ((int) t / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
+
+        timeText.text = minutes + ":" + seconds;
     }
     void FixedUpdate()
     {
