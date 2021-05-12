@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3978905240939022097}
   m_LocalRotation: {x: 0.7168764, y: -0.013900802, z: 0.011204478, w: 0.69697165}
-  m_LocalPosition: {x: 0.00030056838, y: -0.0001930486, z: 0.0057685785}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4683119708464609765}
@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4187801367318293856}
   m_LocalRotation: {x: -0.000000037748944, y: -0.000000043711392, z: 0.000000043711392, w: 1}
-  m_LocalPosition: {x: -0.05917292, y: 1.3019248, z: 0.044646416}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100.000015, y: 100.000015, z: 100.000015}
   m_Children: []
   m_Father: {fileID: 3838576924357095139}
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 3249788061354356968}
   m_Layer: 0
   m_Name: Alien Improved
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -561,7 +561,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!136 &3661395837393406230
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ CapsuleCollider:
   m_Radius: 0.33
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: -0.06, y: 1.15, z: 0}
+  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!95 &3661395837393406228
 Animator:
   serializedVersion: 3
@@ -609,6 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 200
   maxSpeed: 10
+  timeText: {fileID: 0}
 --- !u!1 &4492962030872289339
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7020075793943011604}
   m_LocalRotation: {x: -1.2043867e-15, y: 0.7071068, z: 0.7071068, w: -0.00000006181726}
-  m_LocalPosition: {x: -0.03247061, y: 0.28257832, z: 0.07600588}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 72.78327, y: 72.78327, z: 72.78327}
   m_Children:
   - {fileID: 8654364110352154893}

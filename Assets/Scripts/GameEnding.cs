@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameEnding : MonoBehaviour
 {
-    public GameObject player;
     public Object nextScene;
 
     Rigidbody m_Rigidbody;
@@ -14,7 +13,7 @@ public class GameEnding : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.tag == "Player")
         {
             m_IsPlayerAtExit = true;
         }

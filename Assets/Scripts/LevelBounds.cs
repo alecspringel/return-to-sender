@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class LevelBounds : MonoBehaviour
 {
-    public Rigidbody player;
     public SpawnController spawnController;
+    private Rigidbody player;
 
     void OnTriggerExit(Collider other) {
         if (other.tag == "Player")
         {
+            player = other.GetComponent<Rigidbody>();
             player.position = spawnController.GetSpawn().transform.position;
             player.velocity = Vector3.zero;
         }

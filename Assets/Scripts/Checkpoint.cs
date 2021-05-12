@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    public Rigidbody player;
     public SpawnController spawnController;
 
     void OnTriggerEnter(Collider other)
