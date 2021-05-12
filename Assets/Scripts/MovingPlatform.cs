@@ -10,4 +10,22 @@ using UnityEngine;
      void Update() {
          transform.position = Vector3.Lerp (startPosition, endPosition, Mathf.PingPong(Time.time*speed, 1.0f));
      }
+
+     void OnCollisionStay(Collision other)
+     {
+        if (other.collider.tag == "Player")
+        {
+            other.collider.transform.parent = transform;
+            other.collider.transform.localScale = Vector3.one * 2;
+        }
+     }
+
+     void OnCollisionExit(Collision other)
+     {
+         if (other.collider.tag == "Player")
+        {
+            other.collider.transform.parent = null;
+            other.collider.transform.localScale = Vector3.one;
+        }
+     }
  }
