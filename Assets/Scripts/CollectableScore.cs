@@ -6,7 +6,11 @@ public class CollectableScore : MonoBehaviour
 {
 
     void OnTriggerEnter(Collider other) {
-        Collectable.theScore += 1;
-        Destroy(gameObject);
+        if (other.tag == "Player")
+        {
+            Debug.Log(other.tag);
+            Collectable.theScore += 1;
+            Destroy(gameObject);
+        }
     }
 }
