@@ -1604,24 +1604,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.92296344
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.42442
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.91863
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.1
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.21
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1659,10 +1647,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 8726848682622115323, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1120537809}
     - target: {fileID: 8726848682622115323, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: spawnController
       value: 
@@ -2552,24 +2536,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.9493133
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.47801
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.91162
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2607,10 +2579,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8726848682622115323, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1120537809}
     - target: {fileID: 8726848682622115323, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: spawnController
       value: 
@@ -3829,24 +3797,12 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8626849
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.46022
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.54946
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.9
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.19
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3884,10 +3840,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 8726848682622115323, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1120537809}
     - target: {fileID: 8726848682622115323, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: spawnController
       value: 
@@ -4387,7 +4339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 1364401041529737260, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4425,6 +4377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 6040371984573197959, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abd74104c05f9e39fa829942692072d3, type: 2}
     - target: {fileID: 8726848682622115323, guid: f2a84caa49a1b6fa9888b3c3f4d0f3a4, type: 3}
       propertyPath: player
       value: 

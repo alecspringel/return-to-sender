@@ -5,6 +5,12 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public SpawnController spawnController;
+    private MeshRenderer meshRenderer;
+
+    void Start()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,5 +18,10 @@ public class Checkpoint : MonoBehaviour
         {
             spawnController.SetSpawn(this);
         }
+    }
+
+    public void ChangeColor(Color c)
+    {
+        meshRenderer.material.SetColor("_Color", c);
     }
 }
