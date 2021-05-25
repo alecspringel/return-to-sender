@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NewPlayerMovement : MonoBehaviour
 {
     public float jumpHeight = 1.0f;
     public float maxSpeed = 1.0f;
+    public float clockTime;
+    public AudioSource music;
 
     private Animator animator;
     private Vector3 movement;
@@ -16,9 +19,9 @@ public class NewPlayerMovement : MonoBehaviour
     private bool isGrounded = false;
     private float speedToAdd = 0.0f;
     private float groundDistance;
+    private float start = 0.0f;
 
     public Text timeText;
-    private float startTime;
 
     void Start()
     {
@@ -26,8 +29,6 @@ public class NewPlayerMovement : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         groundDistance = coll.bounds.extents.y;
-
-        startTime = Time.time;
     }
 
     void Update()
@@ -41,7 +42,20 @@ public class NewPlayerMovement : MonoBehaviour
 
         isGrounded = checkGrounded();
 
-        float t = (3*60) - Time.time;
+        float t = clockTime - Time.time;
+
+        if (t < 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (t < 30)
+        {
+            float newPitch;
+            start += Time.deltaTime;
+            newPitch = Mathf.Lerp(1.0f, 1.1f, start);
+            music.pitch = newPitch;
+        }
+
         string minutes = ((int) t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
 

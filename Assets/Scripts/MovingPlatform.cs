@@ -8,24 +8,24 @@ using UnityEngine;
      public float speed = 0.25f;
  
      void Update() {
-         transform.position = Vector3.Lerp (startPosition, endPosition, Mathf.PingPong(Time.time*speed, 1.0f));
-     }
+        transform.position = Vector3.Lerp (startPosition, endPosition, Mathf.PingPong(Time.time*speed, 1.0f));
+    }
 
-     void OnCollisionStay(Collision other)
+     void OnTriggerStay(Collider other)
      {
-        if (other.collider.tag == "Player")
+        if (other.tag == "Player")
         {
-            other.collider.transform.parent = transform;
-            other.collider.transform.localScale = Vector3.one * 2;
+            other.transform.parent = transform;
+            other.transform.localScale = Vector3.one * 2;
         }
      }
 
-     void OnCollisionExit(Collision other)
+     void OnTriggerExit(Collider other)
      {
-         if (other.collider.tag == "Player")
+         if (other.tag == "Player")
         {
-            other.collider.transform.parent = null;
-            other.collider.transform.localScale = Vector3.one;
+            other.transform.parent = null;
+            other.transform.localScale = Vector3.one;
         }
      }
  }
