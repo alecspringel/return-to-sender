@@ -358,6 +358,10 @@ PrefabInstance:
       propertyPath: timeText
       value: 
       objectReference: {fileID: 1953373795}
+    - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
+      propertyPath: clockTime
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3838576924357095139, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5772,7 +5776,7 @@ Transform:
   - {fileID: 1776458914}
   - {fileID: 973382556}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &959071707 stripped
 MonoBehaviour:
