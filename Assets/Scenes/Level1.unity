@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1265994395}
     m_Modifications:
-    - target: {fileID: 4884626916805438633, guid: c799a66cabefd5addaa4f518b8063daa, type: 3}
-      propertyPath: knockback
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 5113171491553680859, guid: c799a66cabefd5addaa4f518b8063daa, type: 3}
       propertyPath: m_Name
       value: Bouncer (1)
@@ -189,23 +185,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8627644048205882478, guid: c799a66cabefd5addaa4f518b8063daa, type: 3}
   m_PrefabInstance: {fileID: 56266319}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &56266321 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5113171491553680859, guid: c799a66cabefd5addaa4f518b8063daa, type: 3}
-  m_PrefabInstance: {fileID: 56266319}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &56266322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56266321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f110b239aedf1e483ef34d4ba33a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &86605417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4457,14 +4436,6 @@ PrefabInstance:
       propertyPath: timeText
       value: 
       objectReference: {fileID: 1242380591}
-    - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
-      propertyPath: clockTime
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
-      propertyPath: jumpHeight
-      value: 600
-      objectReference: {fileID: 0}
     - target: {fileID: 3838576924357095139, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4512,10 +4483,6 @@ PrefabInstance:
     - target: {fileID: 4471667389919966297, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
       propertyPath: m_Name
       value: Alien
-      objectReference: {fileID: 0}
-    - target: {fileID: 4471667389919966297, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}

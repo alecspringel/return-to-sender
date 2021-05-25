@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8664857320412637934}
   - component: {fileID: 8728126622716240429}
   - component: {fileID: 4884626916805438633}
+  - component: {fileID: 56266322}
   m_Layer: 0
   m_Name: Bouncer
   m_TagString: Untagged
@@ -91,7 +92,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5113171491553680859}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62841c4d8f3be5b36a8ebda01f1127bd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.96976566
@@ -110,7 +111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80f12894ae2c024a85a77112518a7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: 500
+  knockback: 1000
+--- !u!114 &56266322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5113171491553680859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f110b239aedf1e483ef34d4ba33a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6966469792858806746
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +214,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6966469792858806746}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62841c4d8f3be5b36a8ebda01f1127bd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
