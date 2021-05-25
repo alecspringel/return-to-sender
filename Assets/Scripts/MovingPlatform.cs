@@ -6,9 +6,16 @@ using UnityEngine;
      public Vector3 startPosition = new Vector3(-26,0,17);
      public Vector3 endPosition = new Vector3(-42,0,17);
      public float speed = 0.25f;
+
+     private Rigidbody rigid;
+
+     void Start()
+     {
+         rigid = GetComponent<Rigidbody>();
+     }
  
      void Update() {
-        transform.position = Vector3.Lerp (startPosition, endPosition, Mathf.PingPong(Time.time*speed, 1.0f));
+        rigid.MovePosition(Vector3.Lerp (startPosition, endPosition, Mathf.PingPong(Time.time*speed, 1.0f)));
     }
 
      void OnTriggerStay(Collider other)

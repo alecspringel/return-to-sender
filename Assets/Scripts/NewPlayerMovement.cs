@@ -20,6 +20,7 @@ public class NewPlayerMovement : MonoBehaviour
     private float speedToAdd = 0.0f;
     private float groundDistance;
     private float start = 0.0f;
+    private float jumpTimer = 0.0f;
 
     public Text timeText;
 
@@ -34,6 +35,8 @@ public class NewPlayerMovement : MonoBehaviour
     void Update()
     {
         updateMovement();  // Get player input
+        jumpTimer += Time.deltaTime;
+
         if (movement != Vector3.zero)
         {
             // Look in the direction of movement
@@ -65,8 +68,9 @@ public class NewPlayerMovement : MonoBehaviour
     {
         if (jump)
         {
-            if (isGrounded)  // Jump if button pressed and grounded
+            if (isGrounded && jumpTimer > 0.2f)  // Jump if button pressed and grounded
             {
+                jumpTimer = 0.0f;
                 rigid.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
             }
             jump = false;
@@ -105,7 +109,7 @@ public class NewPlayerMovement : MonoBehaviour
 
     bool checkGrounded()
     {
-        return Physics.Raycast(transform.position, -Vector3.up, groundDistance + 0.1f);
+        return Physics.Raycast(transform.position, -Vector3.up, groundDistance + 0.005f);
     }
 
     void OnCollisionEnter(Collision other)

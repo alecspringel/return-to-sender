@@ -16,34 +16,55 @@ public class Rotate : MonoBehaviour
     public bool ReverseX = false;
     public bool ReverseY = false;
     public bool ReverseZ = false;
+
+    private Rigidbody rigid;
+    private float time = 0;
+
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody>();
+    }
    
     void Update ()
     {
+        time += Time.deltaTime;
         //Forward Direction
         if(ForwardX == true)
         {
-            transform.Rotate(Time.deltaTime * speed, 0, 0, Space.Self);
+            Vector3 euler = new Vector3(time * speed, 0f, 0f);
+            Quaternion rot = Quaternion.Euler(euler);
+            rigid.MoveRotation(rot);
         }
         if(ForwardY == true)
         {
-            transform.Rotate(0, Time.deltaTime * speed,  0, Space.Self);
+            Vector3 euler = new Vector3(0f, time * speed, 0f);
+            Quaternion rot = Quaternion.Euler(euler);
+            rigid.MoveRotation(rot);
         }
         if(ForwardZ == true)
         {
-            transform.Rotate(0, 0, Time.deltaTime * speed, Space.Self);
+            Vector3 euler = new Vector3(0f, 0f, time * speed);
+            Quaternion rot = Quaternion.Euler(euler);
+            rigid.MoveRotation(rot);
         }
         //Reverse Direction
         if(ReverseX == true)
         {
-            transform.Rotate(-Time.deltaTime * speed, 0, 0, Space.Self);
+            Vector3 euler = new Vector3(-time * speed, 0f, 0f);
+            Quaternion rot = Quaternion.Euler(euler);
+            rigid.MoveRotation(rot);
         }
         if(ReverseY == true)
         {
-            transform.Rotate(0, -Time.deltaTime * speed,  0, Space.Self);
+            Vector3 euler = new Vector3(0f, -time * speed, 0f);
+            Quaternion rot = Quaternion.Euler(euler);
+            rigid.MoveRotation(rot);
         }
         if(ReverseZ == true)
         {
-            transform.Rotate(0, 0, -Time.deltaTime * speed, Space.Self);
+            Vector3 euler = new Vector3(0f, 0f, time * speed);
+            Quaternion rot = Quaternion.Euler(euler);
+            rigid.MoveRotation(rot);
         }
        
     }

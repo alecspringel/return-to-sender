@@ -19,12 +19,14 @@ public class Punch : MonoBehaviour
   private Vector3 StartingPosition;
   private bool IsPunching = true;
   private float Timer = 0.0f;
+  private Rigidbody rigidbody;
 
   void Awake()
   {
     EndingPosition = transform.position + targetOffset;
     StartingPosition = transform.position;
     CurrentSpeed = punchSpeed;
+    rigidbody = GetComponent<Rigidbody>();
   }
 
   void Update()
@@ -37,11 +39,11 @@ public class Punch : MonoBehaviour
       if (Timer > waitSeconds)
       {
         AccelerationSpeed += Mathf.Min(acceleration * Time.deltaTime, 1);    // limit to 1 for "full speed"
-        transform.position = Vector3.MoveTowards(
+        rigidbody.MovePosition(Vector3.MoveTowards(
               transform.position,
               target,
               CurrentSpeed * AccelerationSpeed * Time.deltaTime
-         );
+         ));
       }
     }
     else
