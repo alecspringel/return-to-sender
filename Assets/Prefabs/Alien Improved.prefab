@@ -555,7 +555,7 @@ Rigidbody:
   m_GameObject: {fileID: 4471667389919966297}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 600
   maxSpeed: 10
-  clockTime: 150
+  clockTime: 120
   music: {fileID: 0}
   timeText: {fileID: 0}
 --- !u!1 &4492962030872289339

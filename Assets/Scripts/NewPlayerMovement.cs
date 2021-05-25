@@ -40,7 +40,8 @@ public class NewPlayerMovement : MonoBehaviour
         if (movement != Vector3.zero)
         {
             // Look in the direction of movement
-            rigid.rotation = Quaternion.LookRotation(-movement);
+            Quaternion newLook = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(-movement), Time.deltaTime * 1000);
+            rigid.MoveRotation(newLook);
         }
 
         isGrounded = checkGrounded();
