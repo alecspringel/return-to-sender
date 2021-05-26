@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameEnding : MonoBehaviour
 {
     public Object nextScene;
+    public AudioSource audioSource;
 
     Rigidbody m_Rigidbody;
     bool m_IsPlayerAtExit;
+    private bool endLevel = false;
 
-    
+
     void OnTriggerEnter (Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -26,6 +28,11 @@ public class GameEnding : MonoBehaviour
         {
             EndLevel (false);
         }
+
+        if (endLevel == true)
+        {
+            SceneManager.LoadScene (nextScene.name);
+        }
     }
 
     void EndLevel (bool doRestart)
@@ -38,8 +45,16 @@ public class GameEnding : MonoBehaviour
         else
         {
             //Currently restarting when you cross the finish line
-            SceneManager.LoadScene (nextScene.name);
+            if (audioSource.isPlaying == false) {
+                audioSource.Play();
+            }
+            StartCoroutine(Wait());
             //Application.Quit();
         }
+    }
+
+    IEnumerator Wait() {
+        yield return new WaitForSeconds(5.5f);
+        endLevel = true;
     }
 }

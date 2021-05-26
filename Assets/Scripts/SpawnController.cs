@@ -6,6 +6,7 @@ public class SpawnController : MonoBehaviour
 {
     public Checkpoint []checkpoints;
     private Checkpoint current;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -20,6 +21,8 @@ public class SpawnController : MonoBehaviour
             current.ChangeColor(Color.red);
             spawn.ChangeColor(Color.green);
             current = spawn;
+
+            audioSource.Play();
         }
     }
 

@@ -112,6 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockback: 1000
+  sounds:
+  - {fileID: 8300000, guid: cca7a5dfa40f63648aa156d576891444, type: 3}
+  - {fileID: 8300000, guid: 93603ea6f8f16ab9980e56ee2cfdfa6a, type: 3}
+  - {fileID: 8300000, guid: 0e7df04d980feff77943c5eb1ddb5d66, type: 3}
+  audioSource: {fileID: 0}
 --- !u!114 &56266322
 MonoBehaviour:
   m_ObjectHideFlags: 0
