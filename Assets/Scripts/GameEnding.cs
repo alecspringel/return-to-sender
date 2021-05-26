@@ -18,6 +18,7 @@ public class GameEnding : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             m_IsPlayerAtExit = true;
+            other.GetComponent<NewPlayerMovement>().pauseTimer = true;
         }
     }
 

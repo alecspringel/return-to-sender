@@ -9,6 +9,7 @@ public class NewPlayerMovement : MonoBehaviour
     public float jumpHeight = 1.0f;
     public float maxSpeed = 1.0f;
     public float clockTime;
+    public bool pauseTimer = false;
     public AudioSource music;
 
     private Animator animator;
@@ -21,6 +22,7 @@ public class NewPlayerMovement : MonoBehaviour
     private float groundDistance;
     private float start = 0.0f;
     private float jumpTimer = 0.0f;
+    private float t;
 
     public Text timeText;
 
@@ -30,6 +32,7 @@ public class NewPlayerMovement : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         groundDistance = coll.bounds.extents.y;
+        t = clockTime;
     }
 
     void Update()
@@ -46,7 +49,9 @@ public class NewPlayerMovement : MonoBehaviour
 
         isGrounded = checkGrounded();
 
-        float t = clockTime - Time.time;
+        if (!pauseTimer) {
+            t = clockTime - Time.time;
+        }
 
         if (t < 0)
         {
