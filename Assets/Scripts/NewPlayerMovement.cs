@@ -115,7 +115,7 @@ public class NewPlayerMovement : MonoBehaviour
 
     bool checkGrounded()
     {
-        return Physics.Raycast(transform.position, -Vector3.up, groundDistance + 0.005f);
+        return Physics.Raycast(transform.position, -Vector3.up, groundDistance);
     }
 
     void OnCollisionEnter(Collision other)
