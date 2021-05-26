@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 700
-  maxSpeed: 10
+  maxSpeed: 15
   clockTime: 120
   pauseTimer: 0
   music: {fileID: 0}
