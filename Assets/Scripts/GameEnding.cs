@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameEnding : MonoBehaviour
 {
-    public Object nextScene;
     public AudioSource audioSource;
 
     Rigidbody m_Rigidbody;
@@ -32,7 +31,7 @@ public class GameEnding : MonoBehaviour
 
         if (endLevel == true)
         {
-            SceneManager.LoadScene (nextScene.name);
+            SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

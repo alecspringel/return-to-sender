@@ -22,7 +22,7 @@ public class MenuButtons : MonoBehaviour
   {
     if (newGame)
     {
-      SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+      SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
     }
     if (controls)
     {
