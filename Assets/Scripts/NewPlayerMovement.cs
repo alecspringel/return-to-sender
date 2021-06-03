@@ -55,7 +55,7 @@ public class NewPlayerMovement : MonoBehaviour
 
         if (t < 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else if (t < 30)
         {
