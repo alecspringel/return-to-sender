@@ -50,12 +50,12 @@ public class NewPlayerMovement : MonoBehaviour
         isGrounded = checkGrounded();
 
         if (!pauseTimer) {
-            t = clockTime - Time.time;
+            t -= Time.deltaTime;
         }
 
         if (t < 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else if (t < 30)
         {
