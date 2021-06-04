@@ -39,7 +39,7 @@ public class Level2Manager : MonoBehaviour
 		if(((int)(t%60)) >= 9) {
 			Destroy(NowText);
 			if(((int)(t%60)) < 15) {
-				WatchText.GetComponent<Text>().text = "Things are getting a little trickier, be careful!\n\nTIP: Try to walk at an angle.";
+				WatchText.GetComponent<Text>().text = "Things are getting a little trickier, be careful!\n\nTIP: You move faster while jumping.";
 			}
 		}
 		if(((int)(t%60)) >= 15) {
