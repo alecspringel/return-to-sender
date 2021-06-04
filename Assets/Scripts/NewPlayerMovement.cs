@@ -11,6 +11,7 @@ public class NewPlayerMovement : MonoBehaviour
     public float clockTime;
     public bool pauseTimer = false;
     public AudioSource music;
+    public AudioSource jumpSound;
 
     private Animator animator;
     private Vector3 movement;
@@ -55,6 +56,7 @@ public class NewPlayerMovement : MonoBehaviour
 
         if (t < 0)
         {
+            Collectable.theScore = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else if (t < 30)
@@ -78,6 +80,8 @@ public class NewPlayerMovement : MonoBehaviour
             {
                 jumpTimer = 0.0f;
                 rigid.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+                jumpSound.pitch = Random.Range(.8f, 1.2f);
+                jumpSound.Play();
             }
             jump = false;
         }

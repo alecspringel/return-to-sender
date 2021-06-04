@@ -1489,6 +1489,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1301953883375138959, guid: 3b4d543e03f47d9c9b4cb0ad9cee88d4, type: 3}
   m_PrefabInstance: {fileID: 728547343}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &728547345 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1741826512136098696, guid: 3b4d543e03f47d9c9b4cb0ad9cee88d4, type: 3}
+  m_PrefabInstance: {fileID: 728547343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &773875854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3036,6 +3041,10 @@ PrefabInstance:
       propertyPath: clockTime
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 728547345}
     - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
       propertyPath: pauseTimer
       value: 1

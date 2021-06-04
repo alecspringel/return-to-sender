@@ -3902,6 +3902,10 @@ PrefabInstance:
       propertyPath: timeText
       value: 
       objectReference: {fileID: 1109942884}
+    - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8678376750962926685}
     - target: {fileID: 3838576924357095139, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4353,5 +4357,10 @@ AudioSource:
 --- !u!82 &8678376750962926684 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6315909187904430318, guid: 3b4d543e03f47d9c9b4cb0ad9cee88d4, type: 3}
+  m_PrefabInstance: {fileID: 8678376750962926680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8678376750962926685 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1741826512136098696, guid: 3b4d543e03f47d9c9b4cb0ad9cee88d4, type: 3}
   m_PrefabInstance: {fileID: 8678376750962926680}
   m_PrefabAsset: {fileID: 0}
