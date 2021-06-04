@@ -11,19 +11,32 @@ public class Level3Manager : MonoBehaviour
 	public GameObject Level3Image;
 
 
+	public bool pauseTimer = false;
+	public float clockTime;
+	public float t;
+
+	void Start()
+    	{
+        		t = clockTime;
+	}
+
 	void Update() {
-		if(((int)(Time.time - Time.deltaTime)) >= 0) {
-			if(((int)(Time.time - Time.deltaTime)) < 3) {
+        		if (!pauseTimer) {
+            		t += Time.deltaTime;
+        		}
+
+		if(((int)(t%60)) >= 0) {
+			if(((int)(t%60)) < 3) {
 				CongratsText.GetComponent<Text>().text = "Only one more level until I'm back to my spaceship!!";
 			}
 		}
-		if(((int)(Time.time - Time.deltaTime)) >= 3) {
+		if(((int)(t%60)) >= 3) {
 			Destroy(CongratsText);
-			if(((int)(Time.time - Time.deltaTime)) < 9) {
+			if(((int)(t%60)) < 9) {
 				NowText.GetComponent<Text>().text = "Lastly we have: The Exosphere, the most intense level of the atmosphere yet... Good Luck to us both!";
 			}
 		}
-		if(((int)(Time.time - Time.deltaTime)) >= 9) {
+		if(((int)(t%60)) >= 9) {
 			Destroy(NowText);
 			Destroy(Alien);
 			Destroy(Level3Image);
