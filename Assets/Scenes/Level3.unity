@@ -2345,6 +2345,10 @@ PrefabInstance:
       propertyPath: clockTime
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 3249788061354356968, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 377966756}
     - target: {fileID: 3838576924357095139, guid: 4de5d1e1dd390f324b55c08f2bcfce79, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2545,6 +2549,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3233633243961956001, guid: 3b4d543e03f47d9c9b4cb0ad9cee88d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3b4d543e03f47d9c9b4cb0ad9cee88d4, type: 3}
+--- !u!82 &377966756 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1741826512136098696, guid: 3b4d543e03f47d9c9b4cb0ad9cee88d4, type: 3}
+  m_PrefabInstance: {fileID: 377966755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &390499991
 PrefabInstance:
   m_ObjectHideFlags: 0
