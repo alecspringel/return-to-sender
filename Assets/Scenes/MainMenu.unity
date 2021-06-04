@@ -2075,7 +2075,7 @@ MonoBehaviour:
   levelSelection: 0
   MainCamera: {fileID: 1963972414}
   ControlsCamera: {fileID: 119459591}
-  LevelSelectionCamera: {fileID: 0}
+  LevelSelectionCamera: {fileID: 27876978}
 --- !u!65 &1136325517
 BoxCollider:
   m_ObjectHideFlags: 0
