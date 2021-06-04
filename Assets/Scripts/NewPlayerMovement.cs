@@ -56,6 +56,7 @@ public class NewPlayerMovement : MonoBehaviour
 
         if (t < 0)
         {
+            Collectable.theScore = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else if (t < 30)
