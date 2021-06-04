@@ -48,7 +48,7 @@ public class TutorialManager : MonoBehaviour
 			if(((int)(Time.time - Time.deltaTime)) < 27) {
 				GreetingsText.GetComponent<Text>().text = "Greetings Earthling!";
 				IntroduceText.GetComponent<Text>().text = "I come in peace!!!\nAllow me to introduce myself....";
-				InfoText.GetComponent<Text>().text = "\n\n\nName: Martion no. 410\nPlanet: 0x7E5\njob: galaxy explorer\nstatus: lost\n";
+				InfoText.GetComponent<Text>().text = "\n\n\nName: Martian no. 410\nPlanet: 0x7E5\njob: galaxy explorer\nstatus: lost\n";
 			}
 		}
 		if(((int)(Time.time - Time.deltaTime)) >= 27) {
